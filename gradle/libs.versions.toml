@@ -1,0 +1,25 @@
+[versions]
+asciitable_version = "0.3.2"
+detekt_version = "1.23.8"
+graal_version = "0.11.3"
+gradle_versions_filter_version = "0.1.16"
+kotlin_logging_version = "7.0.13"
+kotlin_version = "2.3.0"
+kotlinter_version = "5.3.0"
+kotlinx_cli_version = "0.3.6"
+logback_version = "1.5.22"
+m3u_version = "1.4.0"
+
+[libraries]
+kotlin-logging = { group = "io.github.oshai", name = "kotlin-logging-jvm", version.ref = "kotlin_logging_version" }
+m3u = { group = "com.github.bjoernpetersen", name = "m3u-parser", version.ref = "m3u_version" }
+logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback_version" }
+kotlinx-cli = { group = "org.jetbrains.kotlinx", name = "kotlinx-cli", version.ref = "kotlinx_cli_version" }
+asciitable = { group = "de.vandermeer", name="asciitable", version.ref = "asciitable_version" }
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt_version" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin_version" }
+kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter_version" }
+versions = { id = "se.ascp.gradle.gradle-versions-filter", version.ref = "gradle_versions_filter_version" }
+graal = { id = "org.graalvm.buildtools.native", version.ref = "graal_version" }
