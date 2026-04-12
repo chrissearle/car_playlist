@@ -14,7 +14,7 @@ repositories {
 }
 
 kotlin {
-    jvmToolchain(22)
+    jvmToolchain(25)
 }
 
 dependencies {
@@ -33,7 +33,7 @@ graalvmNative {
             //buildArgs.add("--enable-url-protocols=http")
             //buildArgs.add("--enable-url-protocols=https")
             javaLauncher.set(javaToolchains.launcherFor {
-                languageVersion.set(JavaLanguageVersion.of(22))
+                languageVersion.set(JavaLanguageVersion.of(25))
                 vendor.set(JvmVendorSpec.GRAAL_VM)
             })
         }
