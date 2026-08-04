@@ -1,7 +1,7 @@
 [versions]
 asciitable_version = "0.3.2"
 detekt_version = "1.23.8"
-graal_version = "1.1.6"
+graal_version = "1.1.7"
 gradle_versions_filter_version = "0.1.16"
 kotlin_logging_version = "8.0.4"
 kotlin_version = "2.4.10"
