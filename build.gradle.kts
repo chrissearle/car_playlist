@@ -19,7 +19,7 @@ kotlin {
 
 dependencies {
     implementation(libs.kotlin.logging)
-    implementation(libs.logback.classic)
+    runtimeOnly(libs.bundles.logging)
     implementation(libs.m3u)
     implementation(libs.asciitable)
     implementation(libs.kotlinx.cli)

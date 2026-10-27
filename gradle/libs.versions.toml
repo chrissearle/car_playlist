@@ -7,15 +7,21 @@ kotlin_logging_version = "8.0.4"
 kotlin_version = "2.4.21"
 kotlinter_version = "5.7.0"
 kotlinx_cli_version = "0.3.6"
-logback_version = "1.6.6"
+log4j2_version = "2.26.1"
 m3u_version = "2.0.0"
 
 [libraries]
 kotlin-logging = { group = "io.github.oshai", name = "kotlin-logging-jvm", version.ref = "kotlin_logging_version" }
 m3u = { group = "com.github.bjoernpetersen", name = "m3u-parser", version.ref = "m3u_version" }
-logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback_version" }
+log4j-api = { group = "org.apache.logging.log4j", name = "log4j-api", version.ref = "log4j2_version" }
+log4j-core = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j2_version" }
+log4j-layout-template-json = { group = "org.apache.logging.log4j", name = "log4j-layout-template-json", version.ref = "log4j2_version" }
+log4j-slf4j2-impl = { group = "org.apache.logging.log4j", name = "log4j-slf4j2-impl", version.ref = "log4j2_version" }
 kotlinx-cli = { group = "org.jetbrains.kotlinx", name = "kotlinx-cli", version.ref = "kotlinx_cli_version" }
 asciitable = { group = "de.vandermeer", name="asciitable", version.ref = "asciitable_version" }
+
+[bundles]
+logging = ["log4j-api", "log4j-core", "log4j-layout-template-json", "log4j-slf4j2-impl"]
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt_version" }
